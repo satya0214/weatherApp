@@ -1,38 +1,400 @@
 .App {
+  padding: 30px 100px 20px 100px;
+}
+
+body{
+  background-image: linear-gradient(to left,rgb(255, 255, 255),rgba(70, 97, 115, 0));
+  
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchDiv {
+  height: 51px;
+  width: 48rem;
+  background-color: darkgray;
+  border-radius: 30px;
+  position: relative;
+  flex-shrink: 2;
+}
+
+.dropdown {
+  background: white;
+  border: 1px solid black;
+  box-shadow: 10px 5px 5px gray;
+  border-radius: 10px;
+  position: absolute;
+  top: 51px;
+  border-top: none;
+  width: 100%;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  span {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    height: 100%;
+    cursor: pointer;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: gray;
+      
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchIcon {
+  position: absolute;
+  left: 11px;
+  width: 40px;
+  height: 40px;
+  top: 7px;
+}
+
+.inputText {
+  position: relative;
+  top: 7px;
+  left: 57px;
+  width: 43rem;
+  height: 30px;
+  border-radius: 16px;
+  border-color:whitesmoke;
+  outline: none;
+  font-size: large;
+
+}
+
+.buttonLocation{
+  background-color: greenyellow;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  width: 17rem;
+  border-radius: 42px 
+  /* flex-shrink:2; */
+}
+
+.buttonIcon{
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+.location{
+  position: relative;
+  left: 31px;
+  font-size: 16px;
+}
+/* .search-div */
+/* assets/images/ */
+/* colors  */
+/* Every day code commit */
+
+main{
+  margin: 45px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 35px;
+}
+
+
+
+
+
+.sunny{
+  background-image: linear-gradient(to right,rgb(159, 157, 157),rgba(34, 36, 37, 0));
+  width: 800px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 45px 10px 45px;
+}
+
+.temperature{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 180px;
+}
+
+.degree{
+display: flex;
+flex-direction: column;
+
+}
+
+.currentTemperature{
+ 
+  letter-spacing: 2px;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.degreeCelcius{
+  /* background: linear-gradient(80.34deg, #292929 -2.93%, rgba(255, 255, 255, 0) 212.44%); */
+ font-size: xxx-large;
+ margin: 0;
+}
+
+.currentCelcius{
+  font-size: x-large;
+ 
+}
+
+.sunCondition{
+  display: flex;
+  flex-direction:column ;
+  position: relative;
+  left: 10px;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.sunrise{
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+  justify-content: space-around;
+  /* height: 50px; */
+  align-items: center;
+}
+
+.sunrise h3{
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.imageData{
+  display: flex;
+  flex-direction: column;
+  width:94.33px; 
+  
+  /* Height:54.67px; */
+  /* gap: 5px; */
+}
+
+.sunriseImage{
+  height: 45px;
+  width: 50px;
+}
+.sunset{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sunset h3{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+
+/* .sunsetImgData{
+  margin-top: -20px;
+} */
+
+.sunsetImage{
+  height: 45px;
+  width: 50px;
+}
+
+.sun{
+  display: flex;
+  width: 230px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sunImgCondition{
+ height: 175px;
+ width: 225px;
+}
+
+
+
+.weatherCondition{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.humidity{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* margin-top: 5px;
+    margin-bottom: 5px; */
+  /* justify-content: space-evenly; */
+}
+
+.humidityImg{
+  height: 50.13px;
+  width: 60px;
+}
+.windImg{
+  width: 60px;
+  height: 59.24px;
+}
+.pressureImg{
+  width: 58px;
+  height: 58px;
+}
+.uvImg{
+  width: 58px;
+  height: 58px;
+}
+.currentWeatheCondition{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.wind{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.pressure{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.uv{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: space-evenly; */
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background-image: linear-gradient(to right,rgb(159, 157, 157),rgba(34, 36, 37, 0));
+  border-radius: 30px;
+  box-shadow: 10px 5px 5px gray;
+  /* padding: 20px; */
+  height: 275px;
+  /* padding: 30px 100px 30px 100px; */
+  
+  /* margin: 20px; */
+  /* height: 100%; */
+  border-radius: 30px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+ 
+  /* flex-direction: row; */
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Box1 CSS */
+
+.Dateheading {
+  font-size: xxx-large;
+  font-family: 'Poppins';
 }
+
+.Datetime{
+  text-align: center;
+  font-size: xx-large;
+  color: #140c0c;
+  margin-bottom: 0px;
+}
+
+.Dateday{
+  color: #070101;
+  font-size:large;
+  margin-top: 0px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+/* Box3 CSS */
+.DayForcastContainer{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  /* height: 200px; */
+}
+
+.forecastHeading{
+  margin: 5px;
+}
+
+.forecastImg{
+  height: 35px;
+  width:60px;
+}
+
+.forcastFunctionContainer{
+  display: flex;
+    gap: 7px;
+    flex-direction: column;
+}
+
+.DayForcastData{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* height: 40px; */
+  /* border-radius: 30px; */
+  /* background-color: aqua; */
+}
+
+/* Box4C CSS */
+
+.forecastHourContent{
+  display: flex;
+  gap: 15px;
+  margin:10px;
+}
+
+.dabba{
+margin:5px 175px;
+}
+
+.forecastHour{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  width: 105px;
+  background-color: aqua;
+  border-radius: 30px;
+  align-items: center;
+}
+
+
+
+
